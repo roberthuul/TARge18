@@ -15,7 +15,7 @@ namespace Kangelased
             _Osavus = SingleRandom.Instance.Next(1, 51)/10.0;
         }
 
-        public virtual int Päästa(int inimesteArv)
+        public override int Päästa(int inimesteArv)
         {
             return (int)Math.Round((95+_Osavus)/100 * inimesteArv,0);
         }

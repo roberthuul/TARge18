@@ -23,7 +23,7 @@ namespace Kangelased
                 }
                 if (nimi_ja_koht[0].EndsWith("*"))
                 { 
-                    kangelased.Add(new SuperKangelane(nimi_ja_koht[0], nimi_ja_koht[1])); 
+                    kangelased.Add(new SuperKangelane(nimi_ja_koht[0].TrimEnd('*'), nimi_ja_koht[1])); 
                 }
                 else
                 {
@@ -33,7 +33,18 @@ namespace Kangelased
         }
         static void Main(string[] args)
         {
+            LaeKangelased("kangelased.txt");
+            foreach (var item in kangelased)
+            {
+                int arv = 100;
+                Console.WriteLine(item);
+                Console.WriteLine($"Päästa tuleb {arv} inimest. \nPäästa suudeti {item.Päästa(arv)}. \n--------");
+            }
+
+            Console.ReadKey();
 
         }
+
+
     }
 }
