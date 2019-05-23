@@ -43,6 +43,8 @@ namespace Kangelased
 
             Console.ReadKey();
 
+
+            Console.WriteLine("Tere!");
         }
 
 
