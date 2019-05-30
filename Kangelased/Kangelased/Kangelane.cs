@@ -19,7 +19,7 @@ namespace Kangelased
             Asukoht = kangelaseAsukoht;
         }
 
-        public int Päästa(int inimesteArv)
+        public virtual int Päästa(int inimesteArv)
         {
             double a = Math.Round((inimesteArv * 0.95),0);
             return (int)a;
